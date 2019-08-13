@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, 
+initial-scale=1.0" />
+<!--
+1)메타태그 : 웹페이지에 대한 부가적인 정보를 제공하는 태그로서
+HTML문서에 대한 메타 데이터를 제공한다. 메타 데이터는 페이지에
+표시되지 않지만 구문 분석이 가능하다.
+메타 요소는 일반적으로 페이지 설명, 키워드, 문서의 작성자, 
+마지막으로 수정된 항목 및 기타 메타 데이터를 지정하는데 사용된다.
+메타 데이터는 브라우저(내용 표시 또는 페이지 재로드 방법),
+검색엔진(키워드) 또는 기타 웹 서비스에서 사용할 수 있다.
+HTML5는 웹 디자이너가 <meta> 태그를 통해 뷰포트(웹 페이지의 사용자가
+볼 수 있는 영역)를 제어 할 수있게하는 메소드를 도입했다.
+2)뷰포트(viewport) : 전체 컨텐츠 중에서 현재 화면에 표시되는 부분으로
+viewport 요소는 페이지의 크기와 배율을 제어하는 방법에 대한
+브라우저 지침을 제공한다.
+3)width=device-width : 장치의 화면 너비를 따르도록 페이지 폭을 설정
+4)initial-scale : 페이지가 브라우저에의해서 처음로딩될 때 초기 
+확대/축소 레벨을 설정.
+  -->
+
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<style type="text/css">
+#page {
+  padding: 5px;
+  width: 960px;
+  margin: 20px auto;
+}
+#header {
+  height: 50px;
+  background-color: yellow;
+}
+#main {
+  width: 600px;
+  float: left;
+  background-color: aqua;
+}
+#sidebar {
+  width: 300px;
+  float: right;
+  background-color: blue;
+}
+#footer {
+  clear: both;
+  background-color: coral;
+}
+#header, #main, #sidebar, #footer {
+  border: solid 1px red;
+}
+
+/* 미디어 쿼리 : @media 미디어타입  and (최대가로사이즈 설정)
+미디어타입(all, print, projection, screen, speech, tv 등)
+근래에는 부트스트랩이라는 기술도 씀
+ */
+@media screen and (max-width: 980px){
+#page {
+  width: 94%;
+}
+#main {
+  width: 65%;
+}
+#sidebar {
+  width: 30%;
+}
+}
+
+@media screen and (max-width: 700px) {
+#main {
+  width: auto;/* 가로 사이즈 자동 조절 */
+  float: none;
+}
+#sidebar {
+  width: auto;/* 가로 사이즈 자동 조절 */
+  float: none;
+}
+}
+
+@media screen and (max-width: 480px) {
+#header {
+  height: auto;
+}
+h2 {
+  font-size: 24px;
+}
+#sidebar {
+  display: none; /* 사이드바가 안보이게 */
+}
+}
+
+</style>
+
+</head>
+<body>
+<div id="page">
+  <div id="header">
+    <h2>Header</h2>
+  </div>
+  <div id="main">
+    <h2>Main</h2>
+    데스크탑을 위해 디자인된 웹페이지는....데스크탑을 위해 디자인된 웹페이지는....
+    데스크탑을 위해 디자인된 웹페이지는....데스크탑을 위해 디자인된 웹페이지는....
+    데스크탑을 위해 디자인된 웹페이지는....데스크탑을 위해 디자인된 웹페이지는....
+    데스크탑을 위해 디자인된 웹페이지는....데스크탑을 위해 디자인된 웹페이지는....
+  </div>
+  <div id="sidebar">
+    <h2>Slider</h2>
+    <ul>
+      <li>Fluid Grids</li>
+      <li>Media Queries</li>
+    </ul>
+  </div>
+  <div id="footer">
+    <h2>Footer</h2>
+  </div>
+</div>
+</body>
+</html>

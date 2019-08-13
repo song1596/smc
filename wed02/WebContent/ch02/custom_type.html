@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//var 객체자료형 = {변수명:값, 변수명:값,....}
+var myCar = {
+	maker : "BMW",
+    model : "X5",
+    year  : 2019,
+    speed : 60,
+    
+    speedDown : function() {this.speed -=10;},
+    speedUp : function() {this.speed +=10;}
+};
+document.write(typeof(myCar)+"<br>");
+myCar.speedUp();
+
+//멤버호출방법 : 참조변수["변수명"] or 참조변수.변수명
+document.write(myCar["maker"]+"<br>");
+document.write(myCar["model"]+"<br>");
+document.write(myCar["year"]+"<br>");
+document.write(myCar.maker+"<br>");
+document.write(myCar.model+"<br>");
+document.write(myCar.year+"<br>");
+
+/* for ( var x in myCar) {//for (개별변수 in 객첵)
+	txt += myCar[x]+" "; //객체[인덱스]
+}
+document.write(txt); */
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

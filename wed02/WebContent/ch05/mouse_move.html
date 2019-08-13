@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+$(document).mousemove(function(e){
+	//e : 마우스이벤트의 참조변수로 쓰임
+	console.log(e);//개발자 화면에서 e값을 출력해봄
+	//pageX:x좌표, pageY:y좌표
+	$("#log").html("<h2 style='color:red;'>x:"+e.pageX+",y:"
+	+e.pageY+"</h2>");
+});
+
+</script>
+
+</head>
+<body>
+<div id="log"></div>
+</body>
+</html>

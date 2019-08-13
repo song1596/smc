@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" 
+style="border:1px solid red;">
+</canvas>
+
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas");//캔버스-도화지
+var context=canvas.getContext("2d");//컨텍스트(그래픽 처리 객체,붓)
+context.fillStyle="#ffff00";//컨텍스트(붓)의 색상 설정
+context.fillRect(0,0,100,50);
+</script>
+</body>
+</html>

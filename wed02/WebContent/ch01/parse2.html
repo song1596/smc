@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function calc(){
+	//document : 자바스크립트의 내장객체, 웹페이지 문서 객체로
+	//현재페이지를 가리킴
+	//document.getElementById("태그의 id").value
+	var x = document.getElementById("x").value;//태그쪽에 입력한 값
+	var y = document.getElementById("y").value;
+	var hap;
+	hap = parseInt(x) + parseInt(y);
+	//id가 sum인 태그에 hap의 값을 할당받아 출력한다.
+	document.getElementById("sum").value = hap;
+}
+</script>
+</head>
+<body>
+<!--
+id: 중복 불가, document.getElementById("태그의 id")
+name: 중복 가능, document.getElementsByName("태그의 name")
+name으로 접근시에는 document.폼name.태그name
+  -->
+
+<form name="myform">
+  첫번째 정수 : <input type="text" id="x"><br>
+  두번째 정수 : <input type="text" id="y"><br>
+  합계 : <input id="sum"><br>
+  
+  <input type="button" value="계산" onclick="calc()">
+</form>
+
+</body>
+</html>

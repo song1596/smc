@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="remaining"></div>
+<script type="text/javascript">
+function datesUntilNewYear() {
+	var now = new Date();//현재 시각
+	//new Date(year, month, day) 2019년 1월 1일 (월은 0부터) 
+	var newYear = new Date((now.getFullYear() + 1),0,1);
+	var diff = newYear - now;
+	
+	//밀리세컨드 계산
+	var milliseconds = Math.floor(diff % 1000);
+	diff = diff/1000;
+	//초 계산
+	var seconds = Math.floor(diff % 60);
+	diff = diff/60;
+	//분 계산
+	var minutes = Math.floor(diff % 60);
+	diff = diff/60;
+	//시 계산
+	var hours = Math.floor(diff % 24);
+	diff = diff/24;
+	var days = Math.floor(diff);
+	var outStr = "내년 신정까지 " + days + "일, " + hours + "시간, "
+	  + minutes + "분, " + seconds + "초, " 
+	  + milliseconds + "밀리초 남았습니다.";
+	document.getElementById("remaining").innerHTML = outStr;
+}
+
+//setTimeout("datesUntilNewYear()", 1000);//타이머(1초에 한번만 호출)
+setInterval("datesUntilNewYear()", 1000);//타이머(1초에 한번씩 계속 호출)
+</script>
+
+</body>
+</html>

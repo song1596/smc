@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+	var i =0;
+	$("div.out").mouseover(function(){
+		$("p:first").text("mouse over");
+		$("p:first").html("<marquee>mouse over</marquee>");
+		
+		$("p:last").text(++i);//아래p태그에 0값 부터 계속 1씩 증가
+	});
+	$("div.out").mouseout(function(){
+		$("p:first").text("마우스를 여기로 움직이세요.");
+	});
+	
+});
+
+</script>
+
+</head>
+<body>
+<div class="out">
+  <p>마우스를 여기로 움직이세요</p>
+  <p>0</p>
+</div>
+
+<div>두번째 div(기능없는 비교용 문자)</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="test" style="color:blue; background-color: purple;">
+This is a heading</h1>
+<script type="text/javascript">
+function func() {
+	var e = document.getElementById("test");
+	e.style.color = "red"; //글자색 변경
+	e.style.backgroundColor = "yellow"; //배경색 변경
+	//자바스크립트의 배경색은 backgroundColor
+	//html 배경색은 background-color
+}
+</script>
+<button type="button" onclick="func()">클릭하세요</button>
+
+</body>
+</html>

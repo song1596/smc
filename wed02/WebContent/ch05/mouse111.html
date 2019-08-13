@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script> 
+<script>
+$(function(){
+	//선택자.bind(이벤트:함수, 이벤트:함수,....)
+/* 	$("img").bind({//bind는 이벤트를 연결하는 함수
+		mouseout : function() {//마우스가 빠져나갈때
+			$("img").attr("src", "../images/i0075.jpg");
+		},
+		mouseover : function() {//마우스 올라갈때
+			$("img").attr("src", "../images/i0076.jpg");
+		},
+		click : function() {
+			$("img").attr("src", "../images/i0073.jpg");
+		}
+	}); */
+	
+	//3개의 이벤트를 별도로 처리해도 가능함
+	$("img").mouseout(function(){
+		$("img").attr("src", "../images/i0075.jpg");
+	});
+	$("img").mouseover(function(){
+		$("img").attr("src", "../images/i0076.jpg");
+	});
+	$("img").click(function(){
+		$("img").attr("src", "../images/i0073.jpg");
+	});	
+	
+	
+});//바깥쪽 Jquery 블록 end
+
+
+
+
+</script>
+</head>
+<body>
+<img alt="" src="../images/i0075.jpg">
+</body>
+</html>

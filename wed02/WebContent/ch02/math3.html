@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+document.write("<h1>가위 바위 보 맞추기 게임</h1>");
+var t = prompt("가위, 바위, 보 중 선택하세요", "가위");
+var tNum;
+switch (t) {
+case "가위":
+	tNum = 1;
+	break;
+case "바위":
+	tNum = 2;
+	break;
+case "보":
+	tNum = 3;
+	break;
+default:
+	alert("잘못 작성하셨습니다.");
+	location.reload(); //현재 페이지 새로 고침
+}
+//0.0~1.0 사이난수 x 3 = 올림함수를 써서 1~3까지만 난수 발생
+var com = Math.ceil(Math.random()*3);//컴퓨터 1(가위), 2(바위), 3(보)
+//images/math_img_1.png, images/math_img_2.png, images/math_img_3.png
+document.write("<img src=../images/math_img_"+com+".png>");
+if(tNum == com) {
+	alert("맞았습니다! 축하합니다!!");
+} else if (tNum) {
+	alert("틀렸네요! 다음 기회에 또 도전하세요!!");
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

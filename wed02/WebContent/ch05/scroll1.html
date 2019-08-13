@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+ $(function() {//onload 이벤트
+	 //베너의 현재 좌표값 저장(top의 좌표)
+	 var currentPosition = parseInt($("#slidemenu").css("top"));
+ 	//스크롤 이벤트가 발생하면
+ 	$(window).scroll(function(){
+ 		//스크롤바의 좌표 저장
+ 		var position = $(window).scrollTop();
+ 		console.log("스크롤바의 좌표:"+position);//개발자 콘솔에서
+ 		//스크롤바좌표값을 찍어봄
+ 		
+ 		//top(y좌표)의 값을 현재 스크롤바의 위치로 
+ 		//이동(1초동안 애니메이션 효과)
+ 		$("#slidemenu").stop().animate({
+ 			"top" : position + currentPosition + "px"
+ 		}, 1000);
+ 	});
+ });
+</script>
+<style type="text/css">
+#slidemenu {
+  background: #12cf3d;
+  position: absolute; /* 절대좌표  */
+  width : 200px;
+  top : 50px;
+  right: 10px;
+}
+</style>
+</head>
+<body>
+  <h3>슬라이드 메뉴</h3>
+  <div id="text">
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    스크롤해도 이미지가 계속 보이게 함.스크롤해도 이미지가 계속 보이게 함.
+    <br>
+  </div>
+  <div id="slidemenu">
+    슬라이드 메뉴<br> <img alt="" src="../images/tomato.jpg" 
+    width="200" height="200" />
+  </div>
+</body>
+</html>

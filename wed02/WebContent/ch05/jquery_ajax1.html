@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+		alert("1");
+		$("#target").load("test.txt");
+		alert("2");
+		$("#p1").html("문단 영역...");
+		alert("3");
+	});
+});
+</script>
+<style type="text/css">
+#target {
+	width: 300px;
+	height: 100px;
+	border: 1px solid black;
+	overflow: auto;/* 내용이 많아지면 자동으로 scroll bar가 생김 */
+}
+</style>
+</head>
+<body>
+<p id="p1"></p>
+<div id="target"></div>
+<button>확인</button>
+</body>
+</html>

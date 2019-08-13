@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+ var arrName = ["갑", "을", "병", "정"];
+ $(function(){
+	 //자바스크립트의 map : 기본적으로 숫자 인덱스의 배열로 처리됨
+	 //자바와 반대로 key, value가 아닌 value, key로 값이 들어감
+	var arr = arrName.map(function(value, key) {
+		console.log("value:"+value+ ",key:"+key);
+		return value;
+	});
+   console.log(arr);
+ });
+</script>
+</head>
+<body>
+</body>
+</html>

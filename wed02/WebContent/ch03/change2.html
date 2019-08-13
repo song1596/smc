@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function get() {
+	var val = document.getElementById("ex").innerHTML;
+	alert(val);
+}
+function set(v) {
+	document.getElementById("ex").innerHTML = v;
+}
+
+function changeImage() {
+	var img = document.getElementById("image");
+	//이미지태그.src = "이미지파일이름"
+	img.src = "../images/tang2.jpg";
+	//이미지 가로,세로 사이즈 변경
+	img.style.width = "250px";
+	img.style.height = "200px";
+}
+function changeStyle() {
+	var ex = document.getElementById("ex");
+	//태그.style.스타일속성 = "변경할 값"
+	//스타일속성은 css에서 사용하는 이름과 다름(주의)
+	ex.style.color = "red";
+	ex.style.backgroundColor = "yellow";
+	ex.style.fontSize = "30px";
+	ex.style.fontFamily = "궁서체";
+	ex.style.fontStyle = "italic";
+}
+function show() {
+	document.getElementById("image").style.visibility = "visible";
+}
+
+function hide() {
+	document.getElementById("image").style.visibility = "hidden";
+	//document.getElementById("image").style.display = "none";
+	
+	//"none"자리배치조차 없어짐.
+}
+</script>
+<style type="text/css">
+#ex {
+  background-color: blue;
+  font-family: "굴림체";
+  font-size: 50px;
+}
+</style>
+</head>
+<body>
+<div id="ex">div 영역</div>
+<a href="#" onclick="get()">div의 내용</a>
+<a href="#" onclick="set('변경되었습니다')">div 변경</a>
+<br>
+<img id="image" alt="" src="../images/tang1.jpg">
+<input type="button" value="이미지 변경" onclick="changeImage()">
+<input type="button" value="이미지 숨김" onclick="hide()">
+<input type="button" value="이미지 표시" onclick="show()">
+<br>
+<input type="button" value="글자 스타일 변경" onclick="changeStyle()">
+
+</body>
+</html>

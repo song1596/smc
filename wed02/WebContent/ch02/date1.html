@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var d1 = new Date();//내장객체(Date), 날짜자료형
+document.write(d1.getYear() + 1900 + "<br>");//년도, 1900을 더해야함
+document.write(d1.getFullYear() + "<br>");
+document.write(d1.getMonth() + 1 + "<br>");//0~11(월은 1을 더해야 함)
+document.write(d1.getDate() + "<br>");
+document.write(d1.getHours() + "<br>");
+document.write(d1.getMinutes() + "<br>");
+document.write(d1.getSeconds() + "<br>");
+document.write(d1.getMilliseconds() + "<br>");
+document.write("======================<br>");
+document.write(d1.toDateString() + "<br>");
+document.write(d1.toISOString() + "<br>");
+document.write(d1.toJSON() + "<br>");
+document.write(d1.toLocaleDateString() + "<br>");
+document.write(d1.toLocaleTimeString() + "<br>");
+document.write(d1.toLocaleString() + "<br>");
+document.write(d1.toString() + "<br>");
+document.write(d1.toTimeString() + "<br>");
+//utc : 1972.1.1 기준
+//Coordinated Universal Time(협정세계시)
+document.write(d1.toUTCString() );
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

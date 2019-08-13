@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function test(){
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	context.beginPath();//경로 초기화
+	context.rect(10,10, 100,50);
+	context.fillStyle = "#00ff00";//색상 설정
+	context.fill();//색상 처리
+}
+
+</script>
+
+</head>
+<body onload="test()">
+  <canvas id="myCanvas" width="300" height="200" 
+  style="border: 1px solid red;">
+  </canvas>
+</body>
+</html>

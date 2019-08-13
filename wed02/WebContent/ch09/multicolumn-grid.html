@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>jQuery Mobile</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page1">
+  <div data-role="header">
+    <h1>header영역</h1>
+  </div>
+  <div data-role="content">
+    <div class="ui-grid-a"><!-- 그리드 열 개수:2개, 포함되는 
+    그리드 블록: ui-block-a,ui-block-b -->
+       <div class="ui-block-a">블록1</div>
+       <div class="ui-block-b">블록2</div>
+    </div>
+    <div class="ui-grid-b"><!-- 그리드 열 개수:3개, -->
+       <div class="ui-block-a">블록1</div>
+       <div class="ui-block-b">블록2</div>
+       <div class="ui-block-c">블록3</div>
+    </div>
+    <div class="ui-grid-c"><!-- 그리드 열 개수:3개, -->
+       <div class="ui-block-a"><!-- 왼쪽 첫 번째 블록  -->
+         <button>버튼1</button>
+       </div>
+       <div class="ui-block-b"><!-- 왼쪽 두 번째 블록 -->
+         <button>버튼2</button>
+         <button>버튼3</button>
+       </div>
+       <div class="ui-block-c"><!-- 왼쪽 세 번째 블록 -->
+         <button>버튼4</button>
+         <button>버튼5</button>
+         <button>버튼6</button>
+       </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+</body>
+</html>

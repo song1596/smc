@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas");
+var context=canvas.getContext("2d");
+//선형 그라이언트 효과: createLinearGradient(x1,y1,x2,y2)
+var gradient=context.createLinearGradient(0,0,200,0);
+//시작색상(색상범위는 0.0 ~ 1.0)
+gradient.addColorStop(0, "yellow");//시작색
+gradient.addColorStop(0.4, "red");
+gradient.addColorStop(0.7, "green");
+gradient.addColorStop(1, "blue");//끝색
+context.fillStyle=gradient;//gradient에 대한 페인트 설정
+context.fillRect(10,10,180,90);
+</script>
+</body>
+</html>

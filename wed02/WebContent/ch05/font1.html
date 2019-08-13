@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script>
+var fontSize;//전역변수
+$(init);//페이지가 로딩된 후 init함수 자동실행, 주의 $(init());쓰면 안됨
+function init() {
+	$("#fontControl li a").click(clickHandler);//클릭 이벤트
+}
+
+function clickHandler(e) {
+	e.preventDefault();//a태그의 기본효과를 막음.
+	var whichClicked = $(this).attr("id");
+	fontSize = parseInt($(".content").css("font-size"));
+	console.log("size:"+fontSize);
+	switch(whichClicked) {
+	case "larger":
+		setFontSize(5);//폰트사이즈 5씩 늘어남
+		break;
+	case "smaller":
+		setFontSize(-5);//폰트사이즈 5씩 줄어듬
+		break;
+	}
+}
+
+function setFontSize(size) {
+	var totalFontSize = fontSize + size;
+	$(".content").css({
+		"font-size" : totalFontSize + "px",
+		"font-weight" : 'bold'
+	});
+}
+</script>
+<style type="text/css">
+.content {
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<h2>글꼴 사이즈 조절</h2>
+<div id="div1">
+ <ul id="fontControl">
+   <li><a href="#" id="larger">크게</a></li>
+   <li><a href="#" id="smaller">작게</a></li>
+ </ul>
+</div>
+<div class="content">테스트 문자열</div>
+</body>
+</html>

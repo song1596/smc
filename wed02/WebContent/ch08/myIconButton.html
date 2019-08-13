@@ -1,0 +1,81 @@
+<!-- http://192.168.0.40/web02/ch08/myIconButton.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+<link rel="stylesheet" href="../include/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="../include/jquery.mobile-1.4.5.min.js"></script>
+<style type="text/css">
+#header1, #header2, #header3, #footer1, #footer2, #footer3 {
+	background-color: black;
+	color: #73a7bc;
+	text-shadow: 1px 1px 0 #73a7bc;
+}
+</style>
+</head>
+<body>
+<div data-role="page" id="page1">
+	<div data-role="header" id="header1">
+		<h1 style="letter-spacing:3px;">DUNKIRK</h1>
+		<a href="#page1" data-role="button" data-icon="refresh" data-iconpos="notext">새로고침</a>
+		<a href="#page2" class="ui-btn-right" data-transition="none">다이나모 작전이란?</a>
+	</div>
+	<div data-role="content">
+		<h1 style="text-align:center; letter-spacing:4px;">DUNKIRK (2017)</h1>
+		<h4 style="text-align:center; letter-spacing:3px;">BY CHRISTOPHER NOLAN</h4>
+		<p align="middle"><img src="../images/dunkirk.gif" 
+			 style="max-width:100%; height:auto; text-align:center;"></p>
+	</div>
+	<div data-role="footer" id="footer1" data-position="fixed">
+		<h5 style="letter-spacing:2px; font-size:15px; font-weight:400;">
+		Copyright &copy; CHRISTOPHER NOLAN All Rights Reserved.</h5>
+	</div>
+</div>
+<div data-role="page" id="page2">
+	<div data-role="header" id="header2">
+		<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext">메인으로</a>
+		<a href="#page3" class="ui-btn-right" data-transition="none">예고편</a>
+		<h1 style="letter-spacing:3px;">DUNKIRK</h1>
+	</div>
+	<div data-role="content">
+		<h2 style="letter-spacing:2px; text-align:center;">다이나모 작전이란?</h2>
+		<p style="letter-spacing:1px;">
+		다이나모 작전(Operation Dynamo, 1940년 5월 26일 - 6월 4일)은 제2차 세계 대전 초기에 행해진 작전 중 하나로서, 
+		덩케르크 전투에서 벨기에군과 영국 원정군 및 3개 프랑스군 등 총 34만여 명을 구출할 목적으로 실행된 작전이다. 
+		영국 해군 중장 버트람 램지가 작전을 계획하여, 영국 수상 윈스턴 처칠에게 다이나모 룸(다이나모는 발전기가 있던 도버 성 지하의 해군지휘소의 방 이름)에서 
+		이 작전에 대한 개요를 설명한 것에서 이름이 유래되었다.
+		9일 동안 860척에 달하는 선박이 급히 모여 총 338,226명의 병사들을 프랑스의 덩케르크에서 구출하였다. 
+		이 유명한 "덩케르크의 작은 배들(Little Ships of Dunkirk)"에는 여러 민간 선박이 긴급히 징발되어 
+		병사들을 해안에서 바다에서 대기 중인 대형 선박으로 운반했다. 
+		이 "작은 배들의 기적"은 영국 국민의 마음에 깊히 각인되어 사기를 복돋아 주었으나, 
+		실제로는 병사들의 80% 이상이 항구의 방파제에서 42척의 구축함 등 기타 대형 선박에 탑승해 철수하였다.</p>
+	</div>
+	<div data-role="footer" id="footer2" data-position="fixed">
+		<h5 style="letter-spacing:2px; font-size:15px; font-weight:400;">
+		Copyright &copy; CHRISTOPHER NOLAN All Rights Reserved.</h5>
+	</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="header" id="header3">
+		<a href="#page1" data-role="button" data-icon="home" data-iconpos="notext">메인으로</a>
+		<h1 style="letter-spacing:3px;">DUNKIRK</h1>
+		<a href="#page2" data-role="button" data-icon="back" 
+			data-iconpos="notext" data-transition="none">뒤로</a>
+	</div>
+	<div data-role="content">
+		<h2 style="text-align:center; font-weight:400; letter-spacing:3px;">OFFICIAL TRAILER</h2>
+		<p align="middle"><iframe max-width="100%" height="auto" 
+		src="https://www.youtube.com/embed/T7O7BtBnsG4" frameborder="0" 
+		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+		allowfullscreen></iframe></p>
+	</div>
+	<div data-role="footer" id="footer3" data-position="fixed">
+		<h5 style="letter-spacing:2px; font-size:15px; font-weight:400;">
+		Copyright &copy; CHRISTOPHER NOLAN All Rights Reserved.</h5>
+	</div>
+</div>
+</body>
+</html>

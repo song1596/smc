@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas");
+var context=canvas.getContext("2d");
+var image=new Image(); //이미지 객체 생성
+//이미지 경로
+image.src="../images/image.png";
+image.onload=function(){//무명함수처리
+	//drawImage(이미지,x좌표,y좌표)
+	context.drawImage(image,0,0);
+}
+</script>
+</body>
+</html>
